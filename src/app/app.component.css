@@ -1,0 +1,30 @@
+ust{
+    position: sticky;
+    top: 0px;
+}
+
+.icerik{
+    
+    margin-top: 2.5%;
+    margin-right: 1em;
+    margin-left: 1em ;
+    padding: 1em;
+    height: 72%;
+    width: 95%;
+
+    overflow-y:auto;
+
+    /* sadece mozilla da geçerli*/
+    scrollbar-width: thin; 
+
+    background-color: rgba(5, 214, 214, 0.1);
+    border-radius: 20px;
+}
+  
+
+alt{
+    /* position:absolute; */
+    display: block;
+    /* bottom: 0px; */
+}
+

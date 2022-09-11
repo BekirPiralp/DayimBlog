@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+    
+    /* background-image: linear-gradient(90deg,grey,rgb(10, 14, 14),aqua) !important; */
+    --renk-benim:rgba(255, 255, 255, 0.200);
+    --renk-benim2:rgba(0, 0, 0, 0.500);
+    --bg-ana-resim:url('./assets/backgroundSukenarı.jpg');
+    --bg-ana: linear-gradient(var(--renk-benim2),var(--renk-benim)),var(--bg-ana-resim);
+    background:  var(--bg-ana);
+    background-repeat:no-repeat; 
+    background-size: 100% 100%;
+
+    /* ayrı*/
+    background-color: var(--bs-body-bg);
+}

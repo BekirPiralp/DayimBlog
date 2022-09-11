@@ -1,0 +1,54 @@
+*{
+    --login-color-bg:rgba(255,255,255,0.3);
+    --input-border-color: #41d7a7;
+    --input-color:white;
+    --input-color-bg:rgba(90, 201, 209, 0.3);
+    --kayit-color: red;
+
+    
+}
+.form-control{
+    margin-top: 3%;
+    border-radius: 50% 30px ;
+}
+
+.border:hover, .border:focus{
+    border-color: lightgreen !important;
+    border-width: 10px 1px!important;
+    border-style:double!important;
+}
+    
+
+
+form{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--login-color-bg);
+}
+
+input{
+    border-color: var(--input-border-color) !important;
+    background-color: var(--input-color-bg) !important;
+    color: var(--input-color) !important;
+}
+
+.btn{
+    --bs-btn-bg:rgba(0,0,0,0.5);
+}
+
+.kayit{
+    color: var(--kayit-color);
+}
+
+.kayit:hover{
+    cursor: pointer;
+    font-size:x-large;
+}
+
+p{
+    color: grey;
+    margin-top: 10px;
+}
+

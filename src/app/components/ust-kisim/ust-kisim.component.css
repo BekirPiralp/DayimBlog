@@ -1,0 +1,24 @@
+.bg-dark{
+    --bs-bg-opacity:0.65 !important;
+    /* background-color: rgba(0, 0,0,0.7) !important; */
+}
+
+.ozel::after{
+    content: '' ;
+    height: 2px;
+    width: 0px;
+    background: #0decd6;
+    position:absolute;
+    left: 0;
+    bottom: 2px; 
+    transition: 0.5s;
+    border-radius: 3px;
+}
+
+.ozel:hover::after{
+    width: 100%;
+}
+
+.ozel{
+    /* display: block; */
+}
