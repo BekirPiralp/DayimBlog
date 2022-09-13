@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'ust',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UstKisimComponent implements OnInit {
 
-  constructor() { }
+  constructor(router:Router) { 
+    this._router=router;
+  }
+
+  private _router;
 
   ngOnInit(): void {
   }
-
+  ifGiris(){
+    return this._router.url == "/giris";
+  }
 }

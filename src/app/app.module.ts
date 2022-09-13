@@ -9,6 +9,7 @@ import { AltKisimComponent } from './components/alt-kisim/alt-kisim.component';
 import { IcerikKisimComponent } from './components/icerik-kisim/icerik-kisim.component';
 import { AlertifyService } from 'src/services/alertifyjsServices/alertify.service';
 import { LoginKisimComponent } from './components/login-kisim/login-kisim.component';
+import { ZamanComponent } from './components/ozel/zaman/zaman.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LoginKisimComponent } from './components/login-kisim/login-kisim.compon
     UstKisimComponent,
     AltKisimComponent,
     IcerikKisimComponent,
-    LoginKisimComponent
+    LoginKisimComponent,
+    ZamanComponent
   ],
   imports: [
     BrowserModule,

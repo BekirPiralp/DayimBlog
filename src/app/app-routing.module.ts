@@ -4,8 +4,9 @@ import { IcerikKisimComponent } from './components/icerik-kisim/icerik-kisim.com
 import { LoginKisimComponent } from './components/login-kisim/login-kisim.component';
 
 const routes: Routes = [
-  {path: '',component: IcerikKisimComponent},
-  {path: 'giris',component: LoginKisimComponent}
+  {path: 'Ana',component: IcerikKisimComponent},
+  {path: 'giris',component: LoginKisimComponent},
+  {path: '**',redirectTo:'Ana', pathMatch:'full'}//component:LoginKisimComponent}
 ];
 
 @NgModule({

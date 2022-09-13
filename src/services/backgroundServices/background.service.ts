@@ -14,11 +14,6 @@ export class BackgroundService {
 
     this.rnk="";
     this.renkler= [new Renk(0,0,0,0.8),new Renk(0,0,0,0.6),new Renk(255,255,255,0.2),new Renk(255,255,255,0.2),new Renk(0,0,0,0.6),new Renk(0,0,0,0.8)];
-    this.renkler.forEach((val)=>{
-      this.rnk +=val.toString+",";
-    })
-
-    this.rnk=this.rnk.substring(0,this.rnk.length -1);
     this.dereceSet=90;
     this.resimUrl="https://img.freepik.com/free-photo/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background_1258-28311.jpg?w=2000";
     this._resim="";
@@ -39,7 +34,14 @@ export class BackgroundService {
   private rnk:string;
   private _background:string;
 
+  private renkString(){
+    this.renkler.forEach((val)=>{
+      this.rnk +=val.toString+",";
+    })
+    this.rnk=this.rnk.substring(0,this.rnk.length -1);
+  }
   ArkaplanResminiDeğiştir(){
+    this.renkString();
     this._resim=`url('${this.resimUrl}')`;
     this._background=`linear-gradient(${this._derece},${this.rnk}),${this._resim} no-repeat `;
       document.body.style.background=this._background

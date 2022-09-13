@@ -1,25 +1,22 @@
 import { formatDate } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { asapScheduler, first } from 'rxjs';
+import { BackgroundService } from 'src/services/backgroundServices/background.service';
 
 @Component({
   selector: 'icerik',
   templateUrl: './icerik-kisim.component.html',
-  styleUrls: ['./icerik-kisim.component.css']
+  styleUrls: ['./icerik-kisim.component.css'],
+  providers:[BackgroundService]
 })
 export class IcerikKisimComponent implements OnInit {
 
-  constructor() { 
+  constructor(bgService:BackgroundService) {
+    bgService.resimUrl= "backgroundSukenarı.jpg";
+    bgService.ArkaplanResminiDeğiştir()
   }
 
   ngOnInit(): void {
-    this.test() //ilk çalışma
-    setInterval(this.test,1000)
   }
-
-
-   private test():void{
-    document.getElementById("zaman")!.innerHTML=formatDate(Date.now(), "dd-MM-yyyy hh:mm:ss ","en-US");
-  }
-  
+    
 }
