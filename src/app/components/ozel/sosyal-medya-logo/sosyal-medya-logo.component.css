@@ -1,0 +1,10 @@
+
+.icon{
+    height: 27px;
+    width: 27px;
+}
+
+.icon:hover{
+    height: 40px;
+    width: 40px;
+}

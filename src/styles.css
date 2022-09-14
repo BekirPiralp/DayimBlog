@@ -14,3 +14,7 @@ body{
     /* ayrı*/
     background-color: var(--bs-body-bg);
 }
+
+html{
+    overflow: hidden;
+}

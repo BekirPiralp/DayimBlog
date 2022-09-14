@@ -10,6 +10,8 @@ import { IcerikKisimComponent } from './components/icerik-kisim/icerik-kisim.com
 import { AlertifyService } from 'src/services/alertifyjsServices/alertify.service';
 import { LoginKisimComponent } from './components/login-kisim/login-kisim.component';
 import { ZamanComponent } from './components/ozel/zaman/zaman.component';
+import { SosyalMedyaLogoComponent } from './components/ozel/sosyal-medya-logo/sosyal-medya-logo.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { ZamanComponent } from './components/ozel/zaman/zaman.component';
     AltKisimComponent,
     IcerikKisimComponent,
     LoginKisimComponent,
-    ZamanComponent
+    ZamanComponent,
+    SosyalMedyaLogoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [
     AlertifyService,

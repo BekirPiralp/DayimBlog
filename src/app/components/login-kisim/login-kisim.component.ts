@@ -1,18 +1,27 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginMailPassword } from 'src/model/loginMailPassword';
+import { AlertifyService } from 'src/services/alertifyjsServices/alertify.service';
 import { BackgroundService } from 'src/services/backgroundServices/background.service';
+import { LoginService } from 'src/services/loginServices/login.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login-kisim',
   templateUrl: './login-kisim.component.html',
   styleUrls: ['./login-kisim.component.css'],
-  providers:[
-    BackgroundService,
-  ]
+  providers: [BackgroundService],
 })
 export class LoginKisimComponent implements OnInit {
-
-
-  constructor(bgService:BackgroundService) {
+  private _alertifyService: AlertifyService;
+  private _loginService: LoginService;
+  mailPassword: LoginMailPassword = new LoginMailPassword();
+  constructor(
+    alertifyService: AlertifyService,
+    bgService: BackgroundService,
+    loginService: LoginService
+  ) {
+    this._alertifyService = alertifyService;
+    this._loginService = loginService;
     //bgService.resimUrl="https://cdn.pixabay.com/photo/2018/07/25/16/00/art-3561710_960_720.jpg";
     //bgService.resimUrl="https://cdn.pixabay.com/photo/2016/11/22/23/03/hardwood-1851071_960_720.jpg"
     //bgService.resimUrl="https://cdn.pixabay.com/photo/2016/03/18/15/02/ufo-1265186_960_720.jpg"
@@ -24,13 +33,23 @@ export class LoginKisimComponent implements OnInit {
     //bgService.resimUrl="https://img.freepik.com/free-photo/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background_1258-28311.jpg?w=5000"
     //bgService.resimUrl="https://cdn.pixabay.com/photo/2018/01/31/07/36/secret-3120483_960_720.jpg"
     //bgService.resimUrl="https://cdn.pixabay.com/photo/2018/03/09/22/19/annual-rings-3212803_960_720.jpg"
-    bgService.resimUrl="https://cdn.pixabay.com/photo/2016/08/11/23/48/mountains-1587287_960_720.jpg"
+    bgService.resimUrl =
+      'https://cdn.pixabay.com/photo/2016/08/11/23/48/mountains-1587287_960_720.jpg';
 
-    bgService.ArkaplanResminiDeğiştir() 
-    }
-
-  ngOnInit(): void {
-    
+    bgService.ArkaplanResminiDeğiştir();
   }
 
+  ngOnInit(): void {}
+
+  kayit() {
+    this._alertifyService.hata(
+      'Yöneticiye kayıt eklemek isteyip istemediğini sorun'
+    );
+  }
+
+  giris(form:NgForm){
+    this._loginService.GirisEpostaSifre=this.mailPassword;
+    this._loginService.giris();
+    document.location.pathname="";
+  }
 }
