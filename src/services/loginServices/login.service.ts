@@ -4,6 +4,7 @@ import { LoginMailPassword } from 'src/model/loginMailPassword';
 @Injectable({
   providedIn: 'root',
 })
+
 export class LoginService {
   private static _loginMailPassword?: LoginMailPassword;
   constructor() {
@@ -24,6 +25,7 @@ export class LoginService {
   }
   cikis(){
     LoginService._loginMailPassword=undefined;
+    
   }
 
   girisDurumu():boolean{    
@@ -33,3 +35,8 @@ export class LoginService {
     return false;
   }
 }
+
+
+const TOKEN="token";
+const USER_MAIL="userMail";
+
