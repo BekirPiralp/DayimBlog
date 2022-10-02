@@ -11,8 +11,8 @@ export class LoginService {
   }
 
   public set GirisEpostaSifre(loginMailPassword:LoginMailPassword){
-    // Sonra yazılacak
-   LoginService._loginMailPassword = loginMailPassword;
+    
+    LoginService._loginMailPassword = loginMailPassword;
   }
 
   public get GirisEpostaSifre(){
