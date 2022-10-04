@@ -16,6 +16,7 @@ export class ZamanComponent implements OnInit {
   }
 
   private zamanSet(){
+    if(document.getElementById("zaman"))
     document.getElementById("zaman")!.innerHTML=formatDate(Date.now(), "dd-MM-yyyy hh:mm:ss ","en-US");
   }
 }

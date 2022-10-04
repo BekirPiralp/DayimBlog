@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { LoginMailPassword } from 'src/model/loginMailPassword';
+import { LochalStrogeService } from '../localStroge/lochal-stroge.service';
 
 @Injectable({
   providedIn: 'root',
@@ -7,8 +8,10 @@ import { LoginMailPassword } from 'src/model/loginMailPassword';
 
 export class LoginService {
   private static _loginMailPassword?: LoginMailPassword;
-  constructor() {
-    
+  private _lochalService:LochalStrogeService;
+  constructor(lochalService:LochalStrogeService) {
+    this._lochalService = lochalService;
+    LoginService._loginMailPassword = new LoginMailPassword;
   }
 
   public set GirisEpostaSifre(loginMailPassword:LoginMailPassword){
@@ -22,21 +25,17 @@ export class LoginService {
   }
 
   giris(){
+    // giriş işlemleri
+    this._lochalService.tokenValHandler.set("Bur bir test tokenı");
   }
   cikis(){
     LoginService._loginMailPassword=undefined;
-    
+    this._lochalService.tokenValHandler.remove();
   }
 
   girisDurumu():boolean{    
-    if(this.GirisEpostaSifre != undefined )
-    return true;
-    else
-    return false;
+    return this._lochalService.tokenValHandler.is();
   }
 }
 
-
-const TOKEN="token";
-const USER_MAIL="userMail";
 

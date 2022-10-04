@@ -27,4 +27,9 @@ export class RefreshTokenVal extends KeyVal<string> implements IRefreshTokenVal
   }
 }
 
-export class RefreshTokenValHandler extends BaseKeyValHandler<String, RefreshTokenVal> implements IRefreshTokenValHandler {}
+export class RefreshTokenValHandler extends BaseKeyValHandler<String, RefreshTokenVal> implements IRefreshTokenValHandler {
+  constructor() {
+    super(new RefreshTokenVal());
+    
+  }
+}

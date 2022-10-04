@@ -11,7 +11,9 @@ import { AlertifyService } from 'src/services/alertifyjsServices/alertify.servic
 import { LoginKisimComponent } from './components/login-kisim/login-kisim.component';
 import { ZamanComponent } from './components/ozel/zaman/zaman.component';
 import { SosyalMedyaLogoComponent } from './components/ozel/sosyal-medya-logo/sosyal-medya-logo.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LochalStrogeService } from 'src/services/localStroge/lochal-stroge.service';
+import { LoginService } from 'src/services/loginServices/login.service';
 
 @NgModule({
   declarations: [
@@ -26,10 +28,13 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     AlertifyService,
+    LochalStrogeService,
+    LoginService
   ],
   bootstrap: [AppComponent]
 })

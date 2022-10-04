@@ -20,11 +20,17 @@ export class TokenVal extends KeyVal<string> implements ITokenVal {
     super();
     this.key = "token";
   }
-  override parseValType(Value: string | null): string {
+  override parseValType(Value: string | null): string|null {
+    if(Value != null)
     return String(Value);
+    return null;
   }
 }
 
 export class TokenValHandler
   extends BaseKeyValHandler<String, TokenVal>
-  implements ITokenValHandler {}
+  implements ITokenValHandler {
+    constructor() {
+      super(new TokenVal());
+    }
+  }

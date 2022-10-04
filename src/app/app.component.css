@@ -5,7 +5,7 @@ ust{
 
 .icerik{
     
-    margin-top: 2.5%;
+    margin-top: 10%;
     margin-right: 1em;
     margin-left: 1em ;
     padding: 1em;
@@ -17,7 +17,7 @@ ust{
     /* sadece mozilla da geçerli*/
     scrollbar-width: thin; 
 
-    background-color: rgba(5, 214, 214, 0.1);
+    /* background-color: rgba(5, 214, 214, 0.1); */
     border-radius: 20px;
 }
   

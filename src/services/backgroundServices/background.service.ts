@@ -13,7 +13,8 @@ export class BackgroundService {
     this._santizer=sanitizer;
 
     this.rnk="";
-    this.renkler= [new Renk(0,0,0,0.8),new Renk(0,0,0,0.6),new Renk(255,255,255,0.2),new Renk(255,255,255,0.2),new Renk(0,0,0,0.6),new Renk(0,0,0,0.8)];
+    this.renkler= [new Renk(0,0,0,0),new Renk(0,0,0,0),new Renk(255,255,255,0),new Renk(255,255,255,0),new Renk(0,0,0,0),new Renk(0,0,0,0)];
+    
     this.dereceSet=90;
     this.resimUrl="https://img.freepik.com/free-photo/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background_1258-28311.jpg?w=2000";
     this._resim="";

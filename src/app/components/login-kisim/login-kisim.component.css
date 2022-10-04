@@ -1,10 +1,10 @@
 *{
-    --login-color-bg:rgba(255,255,255,0.3);
+    --login-color-bg:rgba(255,255,255,0.8);
     --input-border-color: #41d7a7;
-    --input-color:white;
+    --input-color:grey;
     --input-color-bg:rgba(90, 201, 209, 0.3);
     --kayit-color: red;
-
+    
     
 }
 .form-control{
@@ -31,6 +31,9 @@ form{
 input{
     border-color: var(--input-border-color) !important;
     background-color: var(--input-color-bg) !important;
+    color: var(--input-color) !important;
+}
+input::placeholder{
     color: var(--input-color) !important;
 }
 

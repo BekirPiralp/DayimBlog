@@ -7,17 +7,18 @@ import { LoginService } from 'src/services/loginServices/login.service';
   templateUrl: './ust-kisim.component.html',
   styleUrls: ['./ust-kisim.component.css'],
   providers:[
+    LoginService
   ]
 })
 export class UstKisimComponent implements OnInit {
 
-  constructor(router:Router,girişServisi:LoginService) { 
+  constructor(router:Router,girisServisi:LoginService) { 
     this._router=router;
-    this._girisServisi=girişServisi;
+    this._girisServisi=girisServisi;
   }
 
   private _router;
-  protected _girisServisi:LoginService;
+   _girisServisi:LoginService;
 
   ngOnInit(): void {
   }

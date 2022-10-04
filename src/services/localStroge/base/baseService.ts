@@ -7,7 +7,7 @@ export class KeyVal<ValT> implements IKeyVal<ValT>{
     value: ValT | null = null;
 
     
-    parseValType(Value: string | null): ValT {
+    parseValType(Value: string | null): ValT|null {
         throw new Error("Method not implemented.");
     }
     
@@ -15,22 +15,29 @@ export class KeyVal<ValT> implements IKeyVal<ValT>{
 
 export class BaseKeyValHandler<ValueType ,KeyValue extends  IKeyVal<ValueType>> implements IBaseKeyValHandler<ValueType,KeyValue> {
     
-        
-    set(setObje: KeyValue): void {
-        localStorage.removeItem(setObje.key); // olan veriler temizlenir
-        localStorage.setItem(setObje.key,String(setObje.value))
+
+    private _keyValue:KeyValue;
+    constructor(keyValue:KeyValue) {
+        this._keyValue=keyValue;
+    }
+    set(setVal: ValueType): void {
+        localStorage.removeItem(this._keyValue.key); // olan veriler temizlenir
+        localStorage.setItem(this._keyValue.key,String(setVal))
     }
     get(): KeyValue {
-        
-        
-        let getObje:KeyValue = new KeyVal<ValueType>() as KeyValue;
-        
-    
-        getObje.value= getObje.parseValType(localStorage.getItem(getObje.key));
-
-        return getObje;
+            
+        this._keyValue.value = this._keyValue.parseValType(localStorage.getItem(this._keyValue.key));
+        const response:KeyValue = this._keyValue;
+        return response;
     }
 
+    remove(){
+        localStorage.removeItem(this._keyValue.key);
+    }
+
+    is(): boolean {
+        return this.get().value != null;
+    }
 }
 
 /**
@@ -40,12 +47,14 @@ export interface IKeyVal<ValType>{
     key:string;
     value:ValType | null;
 
-    parseValType(Value:string | null):ValType;
+    parseValType(Value:string | null):ValType|null;
 }
 
 export interface IBaseKeyValHandler<ValueType,KeyValue extends IKeyVal<ValueType>>{
-    set(setObje:KeyValue):void;
+    set(setObje:ValueType):void;
     get():KeyValue;
+    remove():void;
+    is():boolean;
 }
 
 
