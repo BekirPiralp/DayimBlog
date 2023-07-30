@@ -23,8 +23,8 @@ ust{
   
 
 alt{
-    /* position:absolute; */
-    display: block;
-    /* bottom: 0px; */
+    /*position:absolute; */
+    /*display: block;*/
+    bottom: 0px; 
 }
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { LoginService } from 'src/services/loginServices/login.service';
 
 @Component({
@@ -12,18 +12,22 @@ import { LoginService } from 'src/services/loginServices/login.service';
 })
 export class UstKisimComponent implements OnInit {
 
+  private _router;
+  _girisServisi:LoginService;
+  
   constructor(router:Router,girisServisi:LoginService) { 
     this._router=router;
     this._girisServisi=girisServisi;
   }
 
-  private _router;
-   _girisServisi:LoginService;
-
   ngOnInit(): void {
   }
+
   ifGiris(){
     return this._girisServisi.girisDurumu();
     //return this._router.url == "/giris";
+  }
+  cikis(){
+    this._girisServisi.cikis();
   }
 }

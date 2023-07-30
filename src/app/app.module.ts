@@ -14,6 +14,7 @@ import { SosyalMedyaLogoComponent } from './components/ozel/sosyal-medya-logo/so
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LochalStrogeService } from 'src/services/localStroge/lochal-stroge.service';
 import { LoginService } from 'src/services/loginServices/login.service';
+import { AnaSayfaComponent } from './components/icerik-kisim/ana-sayfa/ana-sayfa/ana-sayfa.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { LoginService } from 'src/services/loginServices/login.service';
     IcerikKisimComponent,
     LoginKisimComponent,
     ZamanComponent,
-    SosyalMedyaLogoComponent
+    SosyalMedyaLogoComponent,
+    AnaSayfaComponent
   ],
   imports: [
     BrowserModule,

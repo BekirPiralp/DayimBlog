@@ -46,7 +46,8 @@ export class BackgroundService {
     this._resim=`url('${this.resimUrl}')`;
     this._background=`linear-gradient(${this._derece},${this.rnk}),${this._resim} no-repeat `;
       document.body.style.background=this._background
-      document.body.style.backgroundSize= "100% 100%"
+      document.body.style.backgroundSize= "auto"
+      //document.body.style
   }
 }
 
