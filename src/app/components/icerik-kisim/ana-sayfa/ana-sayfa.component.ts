@@ -18,8 +18,8 @@ export class AnaSayfaComponent implements OnInit {
   }
   ngOnInit(): void {
     this._backgroundService.resimUrl="../../../assets/backgroundWinter2.jpg";
-    this._backgroundService.resimUrl="../../../assets/backgroundWinter.jpg";
-    this._backgroundService.resimUrl="../../../assets/backgroundSpace2.jpg";
+    //this._backgroundService.resimUrl="../../../assets/backgroundWinter.jpg";
+    //this._backgroundService.resimUrl="../../../assets/backgroundSpace2.jpg";
     this._backgroundService.ArkaplanResminiDeğiştir();
   }
 
