@@ -4,17 +4,24 @@
 }
 
 .ozel::after{
-    content: '' ;
-    height: 2px;
+
+    content:'' ;
+    height:2px; /*2px;*/
     width: 0px;
+    float: left;
     background: #0decd6;
-    position:absolute;
-    left: 0;
-    bottom: 2px; 
-    transition: 0.5s;
+    /*position:absolute;*/
+    left: 0px;
+    top:10px; 
+    transition: 0.3s;
     border-radius: 3px;
 }
 
 .ozel:hover::after{
     width: 100%;
+}
+
+.ozel:hover{
+    font-size:x-large;
+    transition: 0.1s;
 }

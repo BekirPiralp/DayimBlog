@@ -5,17 +5,19 @@ ust{
 
 .icerik{
     
-    margin-top: 10%;
+    /*margin-top: 10%;*/
+    margin: 1em;
     margin-right: 1em;
     margin-left: 1em ;
     padding: 1em;
-    height: 72%;
+    min-height: 72%;
     width: 95%;
 
-    overflow-y:auto;
+    /*overflow-y:auto;*/
+    
 
     /* sadece mozilla da geçerli*/
-    scrollbar-width: thin; 
+    /*scrollbar-width: thin; */
 
     /* background-color: rgba(5, 214, 214, 0.1); */
     border-radius: 20px;
@@ -25,6 +27,14 @@ ust{
 alt{
     /*position:absolute; */
     /*display: block;*/
+    
     bottom: 0px; 
+}
+
+.altBolum{
+    width:100%;
+    height:87vh !important;
+    overflow-x:hidden; /*X ekseni aşmalar gizli*/
+    overflow-y: scroll;/*Y ekseni taşmaları kes fakat kaydırma çubuğu ekle*/
 }
 

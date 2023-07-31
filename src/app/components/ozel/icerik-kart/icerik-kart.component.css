@@ -1,0 +1,107 @@
+.cerceve{
+    width: 24em;
+    height: 500px;
+    border-style: none;
+    border-radius: 30px;
+    background-color: rgba(107, 106, 106, 0.692);
+    overflow: hidden;
+    color: white;
+    
+}
+.gorsel{
+    border-bottom: 3px;
+    border-color: #a09f9f75;
+    height: 70%;
+    width: 100%;
+    padding-bottom: 10px;
+}
+.yazi{
+    width: auto;
+    padding: 10px;
+}
+.baslik{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
+.icerik,p{
+    font-size: medium;
+    font-weight: normal;
+
+    overflow: hidden; /*Taşmayı engeller*/
+    text-overflow: ellipsis; /*Fazla taşmada 3 nokta katar*/
+    
+    display: -webkit-box; /*Esnek kutu gibi göster*/
+    -webkit-line-clamp: 2; /* En fazla 3 satır */
+    -webkit-box-orient: vertical; /*yatay diz*/
+    white-space:pre-wrap; /*Fazlayı keser*/
+}
+img{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.gorsel{
+    background-image: url("https://wander-lush.org/wp-content/uploads/2021/10/Turkey-in-winter-DP-Istanbul-bbsferrari.jpg");
+    background-size: auto;
+    background-position: center;
+    background-clip: border-box;
+}
+
+.buttonlar{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content:right;
+}
+
+.btn{
+    margin: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-collapse:separate;
+    
+    padding: 5px;
+    background-color:aquamarine;
+    background-position: center;
+    background-origin:content-box  !important;
+
+    font-weight: bold;
+
+}
+.btn:hover{
+    transition: 0.3s;
+}
+.btn:active{
+    border-color: white;
+    border-width: 2px;
+    box-shadow:-10px 10px 5px,10px -10px 5px;
+    transition:0,1s;
+}
+
+.goruntule{
+    color: pink;
+    background-color: transparent;
+    border-color: pink;
+
+}
+.goruntule:hover{
+    font-weight: bold;
+    color: white;
+    background-color: pink;
+    box-shadow: 5px 5px 5px rgb(202, 157, 164),-5px -5px 5px rgb(209, 157, 166);
+}
+.duzenle{
+    color:rgb(124,249,214);
+    background-color: transparent;
+    border-color: rgb(124,249,214);
+
+}
+.duzenle:hover{
+    font-weight: bold;
+    color: white;
+    background-color: rgb(124,249,214);
+    box-shadow: -5px 5px 5px rgb(133, 228, 201),5px -5px 5px rgb(112, 226, 194);
+}

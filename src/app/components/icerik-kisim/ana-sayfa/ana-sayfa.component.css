@@ -1,0 +1,36 @@
+*{
+    color: black !important;
+}
+.kart{
+    margin:1%;
+    float: left;
+}
+.kartlar{
+    /*display: -webkit-flex !important;*/
+}
+
+.ayrac{
+   display: flex;
+}
+.aysene{
+    width: 10em;
+    padding: 1em;
+    background-color: whitesmoke;
+    color:white;    
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    text-align: center;
+    margin: 2px !important;
+
+}
+
+.cizgi{
+    border: 3px solid #030303 !important;
+    margin-left: 10px !important;
+    width:80%;
+}
+
+.bolum{
+    display:-webkit-box !important;
+    -webkit-box-orient: vertical;
+}

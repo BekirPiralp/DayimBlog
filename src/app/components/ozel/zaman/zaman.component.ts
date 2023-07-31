@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { formatDate } from '@angular/common';
 
 @Component({
-  selector: 'app-zaman',
+  selector: 'zaman',
   templateUrl: './zaman.component.html',
   styleUrls: ['./zaman.component.css']
 })
