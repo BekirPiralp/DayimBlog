@@ -2,6 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { AlertifyService } from 'src/services/alertifyjsServices/alertify.service';
 import { LoginService } from 'src/services/loginServices/login.service';
+
 @Component({
   selector: 'ust',
   templateUrl: './ust-kisim.component.html',
@@ -25,6 +26,9 @@ export class UstKisimComponent implements OnInit {
 
   ngOnInit(): void {
     /*this.aktiflikAyari();*/
+    $(".navbar").on("click",function(){
+      $()
+    });
   }
 
   /* actif olmayı ayarlar şuan geçerli değil*/
