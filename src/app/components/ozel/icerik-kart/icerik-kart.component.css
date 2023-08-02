@@ -53,7 +53,8 @@ img{
 
 .gorsel{
     background-image: url("https://wander-lush.org/wp-content/uploads/2021/10/Turkey-in-winter-DP-Istanbul-bbsferrari.jpg");
-    background-size: auto;
+    background-size:contain;
+    background-repeat: no-repeat;
     background-position: center;
     background-clip: border-box;
 }
