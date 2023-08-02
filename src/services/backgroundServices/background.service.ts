@@ -23,6 +23,15 @@ export class BackgroundService {
 
   _santizer;
   private renkler:Renk[];
+  private _size:string = "auto";
+  /** 
+  * @description
+  * Bu değer varsayılan olarak auto dur.
+  * cover contain auto alır
+  */
+  set size(v:string){
+    this._size = v;
+  }
   private _derece:string='90deg';
   set dereceSet(derece:number){
     this._derece= derece.toString()+'deg';
@@ -46,7 +55,7 @@ export class BackgroundService {
     this._resim=`url('${this.resimUrl}')`;
     this._background=`linear-gradient(${this._derece},${this.rnk}),${this._resim} no-repeat `;
       document.body.style.background=this._background
-      document.body.style.backgroundSize= "auto"
+      document.body.style.backgroundSize= this._size
       //document.body.style
   }
 }

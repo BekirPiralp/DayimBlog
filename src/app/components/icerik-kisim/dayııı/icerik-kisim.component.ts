@@ -13,6 +13,7 @@ export class IcerikKisimComponent implements OnInit {
 
   constructor(bgService:BackgroundService) {
     bgService.resimUrl= "backgroundSukenarı.jpg";
+    bgService.size="cover";
     bgService.ArkaplanResminiDeğiştir()
   }
 

@@ -25,29 +25,7 @@ export class UstKisimComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    /*this.aktiflikAyari();*/
-    $(".navbar").on("click",function(){
-      $()
-    });
-  }
-
-  /* actif olmayı ayarlar şuan geçerli değil*/
-  aktiflikAyari(){
-    let collection =document.getElementsByClassName("nav-link");
-    for(let i=0;i<collection.length;i++){
-      
-      let item = collection[i];
-      item.addEventListener("click",()=>{
-      item.classList.add("active");
-        for(let x=0; x<collection.length;x++){
-          
-          if(x!=i){
-            let otherItem = collection[x];
-            otherItem.classList.remove("active");
-          }
-        }
-      })
-    }
+   
   }
 
   ifGiris(){
@@ -60,7 +38,7 @@ export class UstKisimComponent implements OnInit {
     this._girisServisi.cikis();
     return this._router.url == "Ana";
   }
-
+   public get router (){return this._router;}
   
 
 }

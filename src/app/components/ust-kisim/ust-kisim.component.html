@@ -1,24 +1,24 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand ozel  active " href="#">Ana sayfa</a>
+    <a class="navbar-brand ozel {{router.isActive('Ana',{matrixParams:'ignored',queryParams:'ignored',paths:'exact',fragment:'ignored'}) ? 'active' : ''}} " routerLink="/Ana">Ana sayfa</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
       aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarColor02">
       <ul class="navbar-nav me-auto">
-        <li class="nav-item ozel">
-          <a class="nav-link active " routerLink="Ana">Ev
-            <span class="visually-hidden">(current)</span>
+        <li class="nav-item ozel {{router.isActive('Ev',{matrixParams:'ignored',queryParams:'ignored',paths:'exact',fragment:'ignored'}) ? 'active' : ''}}">
+          <a class="nav-link " routerLink="/Ev">Ev
+            <!--<span class="visually-hidden">(current)</span>-->
           </a>
         </li>
-        <li class="nav-item ozel">
-          <a class="nav-link active " href="#">Hakkında
+        <li class="nav-item ozel {{router.isActive('Hakkinda',{matrixParams:'ignored',queryParams:'ignored',paths:'exact',fragment:'ignored'}) ? 'active' : ''}}">
+          <a class="nav-link  " href="/Hakkinda">Hakkında
           </a>
         </li>
 
-        <li class="nav-item dropdown ozel">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+        <li class="nav-item dropdown ozel ">
+          <a class="nav-link dropdown-toggle " data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
             aria-expanded="false">Dropdown</a>
           <div class="dropdown-menu">
             <a class="dropdown-item ozel" href="#">Action</a>

@@ -6,8 +6,10 @@ import { AnaSayfaComponent } from './components/icerik-kisim/ana-sayfa/ana-sayfa
 
 const routes: Routes = [
   {path: 'Ana',component: AnaSayfaComponent},
+  {path: 'Ev',component: AnaSayfaComponent},
   {path: 'Giris',component: LoginKisimComponent},
   {path: 'Icerik',component: IcerikKisimComponent},
+  {path: 'Hakkinda',component: IcerikKisimComponent},
   //{path: '**',redirectTo:'Ana', pathMatch:'full'}//component:LoginKisimComponent}
   {path: '**',redirectTo: 'Ana',pathMatch:'full'}
 ];
