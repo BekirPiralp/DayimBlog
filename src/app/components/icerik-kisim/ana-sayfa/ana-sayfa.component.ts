@@ -23,5 +23,8 @@ export class AnaSayfaComponent implements OnInit {
     this._backgroundService.ArkaplanResminiDeğiştir();
   }
 
+  git(){
+    document.location.href="Icerik";
+  }
 }
 
