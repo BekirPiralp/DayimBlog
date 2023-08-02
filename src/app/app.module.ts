@@ -16,6 +16,7 @@ import { LochalStrogeService } from 'src/services/localStroge/lochal-stroge.serv
 import { LoginService } from 'src/services/loginServices/login.service';
 import { AnaSayfaComponent } from './components/icerik-kisim/ana-sayfa/ana-sayfa.component';
 import { IcerikKartComponent } from './components/ozel/icerik-kart/icerik-kart.component';
+import { IcerikSayfaComponent } from './components/ozel/icerik-sayfa/icerik-sayfa.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { IcerikKartComponent } from './components/ozel/icerik-kart/icerik-kart.c
     ZamanComponent,
     SosyalMedyaLogoComponent,
     AnaSayfaComponent,
-    IcerikKartComponent
+    IcerikKartComponent,
+    IcerikSayfaComponent
   ],
   imports: [
     BrowserModule,
