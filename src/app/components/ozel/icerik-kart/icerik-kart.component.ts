@@ -11,12 +11,15 @@ import { AlertifyService } from 'src/services/alertifyjsServices/alertify.servic
 })
 export class IcerikKartComponent {
   private _alertifyService:AlertifyService;
-  private _goruntule:undefined|(()=>void) ;
-  private _duzenle:(()=>void)|undefined;
-
+  
   constructor(alertifyService:AlertifyService){
     this._alertifyService = alertifyService;
   }
+
+  //#region buttonların method kapsülleri (encapsulation)
+
+  private _goruntule:undefined|(()=>void) ;
+  private _duzenle:(()=>void)|undefined;
 
   /* daha kodlanmadı diye uyarı */
   uyari(){
@@ -66,4 +69,34 @@ export class IcerikKartComponent {
       this.duzenle=undefined;
     return this._duzenle!;
   }
+
+  //#endregion
+
+  //#region kart image propertyleri
+
+  private _imageSrc:string|undefined;
+
+  /**
+   * @description
+   * Kartta bulunan resmin adresini alır.
+   * Atama yapılmaması durumunda varsayılan değer atanır
+   */
+  @Input() public set imageSrc (src:string|undefined){
+    if(src == undefined || src!.trim() == "")
+      src = "https://wander-lush.org/wp-content/uploads/2021/10/Turkey-in-winter-DP-Istanbul-bbsferrari.jpg";
+    this._imageSrc= src;
+  }
+
+  /**
+   * @description
+   * Kart nesnesinde bulunan resmin adresi getirir.
+   * Değer girilmemiş ise varsayılan olan resim adresi döndürürlür
+   */
+  public get imageSrc():string{
+    if(this._imageSrc == undefined)
+      this.imageSrc=" ";
+      return this._imageSrc!;
+  }
+
+  //#endregion
 }

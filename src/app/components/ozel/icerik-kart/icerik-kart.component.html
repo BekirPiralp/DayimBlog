@@ -1,8 +1,8 @@
 <!-- En dış çerçeve -->
 <div class="cerceve">
     <!-- resim veya video görsel-->
-    <div class="gorsel">
-        <img src="https://wander-lush.org/wp-content/uploads/2021/10/Turkey-in-winter-DP-Istanbul-bbsferrari.jpg" >
+    <!--<div class="gorsel" [style.background-image]="url(imageSrc)">-->
+    <div class="gorsel" [ngStyle]="{'background-image':'url('+imageSrc+')'}">
     </div>
     <!-- başlık ve kısa içerik-->
     <div class="yazi">

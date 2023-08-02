@@ -45,14 +45,9 @@
     -webkit-box-orient: vertical; /*yatay diz*/
     white-space:pre-wrap; /*Fazlayı keser*/
 }
-img{
-    width: 100%;
-    height: 100%;
-    display: none;
-}
 
 .gorsel{
-    background-image: url("https://wander-lush.org/wp-content/uploads/2021/10/Turkey-in-winter-DP-Istanbul-bbsferrari.jpg");
+    /*background-image: url("https://wander-lush.org/wp-content/uploads/2021/10/Turkey-in-winter-DP-Istanbul-bbsferrari.jpg");*/
     background-size:contain;
     background-repeat: no-repeat;
     background-position: center;
