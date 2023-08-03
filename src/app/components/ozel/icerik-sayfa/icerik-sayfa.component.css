@@ -1,0 +1,78 @@
+.container{
+    margin-left: 10%;
+    margin-right: 10%;
+    width: auto;
+
+    min-height:59vh;
+
+    background-color: rgba(128, 128, 128, 0.342);
+
+    border-radius: 30px;
+    box-shadow: 5px 5px 20px pink,2px 2px 5px aquamarine inset;
+
+    text-align: center;
+    padding: 10px;
+}
+
+.baslik{
+    font-size: xx-large;
+    font-family: 'Verdana';
+    font-weight: bold;
+
+    text-shadow: 1px 1px 3px aquamarine;
+    
+}
+
+.baslik:hover{
+    text-shadow: 3px 3px 5px pink;
+}
+
+.anlatim{
+    margin-top: 10px;
+}
+
+.gorsel{
+
+    display: block;
+    margin: 10px;
+
+    border-radius: 30px;
+    overflow: hidden;
+    /*height: 600px;*/
+    /*border-style: groove;*/
+    /*border-top: 5px red groove;*/
+    border-bottom: 2px red solid;
+    /*border-color: black;*/
+   /* background-color: aquamarine;*/
+    padding: 10px;
+
+}
+iframe{
+    width: 700px;
+    height: 400px;
+
+    border-radius: 30px;
+    
+    box-shadow: 1px 1px 5px black, -2px -1px 5px white ;
+}
+
+.yazi{
+    /*background-color: white;*/
+    color: white;
+    width: auto;
+    margin: 10px;
+    height: auto;
+    text-align: left;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    border-radius: 30px;
+
+    box-shadow: 1px 1px 5px whitesmoke;
+}
