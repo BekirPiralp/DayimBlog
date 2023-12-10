@@ -1,0 +1,12 @@
+*{
+    --shadow-color:rgb(255, 72, 72);
+    --derinlik-px:10px;
+}
+
+footer{
+    background-color: rgba(128, 128, 128, 0.699);
+    /*margin-bottom: 0px !important;*/
+    box-shadow: 0px 1px var(--derinlik-px) var(--shadow-color),0px -1px var(--derinlik-px) var(--shadow-color);
+
+    height: 92px;
+}

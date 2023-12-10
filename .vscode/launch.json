@@ -3,6 +3,26 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "firefox",
+      "request": "launch",
+      "reAttach": true,
+      "name": "Launch add-on",
+      "addonPath": "${workspaceFolder}"
+    },
+    {
+      "type": "firefox",
+      "request": "attach",
+      "name": "Attach"
+    },
+    {
+      "type": "firefox",
+      "request": "launch",
+      "reAttach": true,
+      "name": "Launch localhost",
+      "url": "http://localhost/index.html",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
       "name": "ng serve",
       "type": "pwa-chrome",
       "request": "launch",

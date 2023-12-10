@@ -76,3 +76,32 @@ img{
 
     box-shadow: 1px 1px 5px whitesmoke;
 }
+
+.kutu{
+    min-width: 75px;
+    min-height: 300px;
+
+    border-radius: 15px;
+
+    position:fixed;
+    left:2vw;
+    top:19vh;
+
+    display:inline-flex;
+
+    
+    align-items:center; /* x ekseninde */
+    justify-content:space-around; /* y ekseninde */
+    flex-direction: column; /* sütun olarak diz tek sutunda...*/
+    
+    padding: 10px;
+
+    z-index: 10;
+
+    background-color: rgba(128, 128, 128, 0.26);
+    box-shadow: 1px 1px 5px white inset,1px 1px 10px black;
+}
+
+.kutu:hover{
+    box-shadow: 2px 2px 5px aquamarine,2px 2px 5px pink inset;
+}
