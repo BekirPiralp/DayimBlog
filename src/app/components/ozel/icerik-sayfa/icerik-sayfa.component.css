@@ -14,6 +14,12 @@
     padding: 10px;
 }
 
+.container:hover{
+    
+    transition: 1s;
+    background-color: rgba(128, 128, 128, 0.8);
+}
+
 .baslik{
     font-size: xx-large;
     font-family: 'Verdana';
@@ -104,6 +110,7 @@ img{
 
 .kutu:hover{
     box-shadow: 2px 2px 5px aquamarine,2px 2px 5px pink inset;
+    background-color: rgba(128, 128, 128, 0.5);
 }
 
 .geriBildirim{
