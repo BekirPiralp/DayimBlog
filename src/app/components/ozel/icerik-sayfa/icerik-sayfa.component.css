@@ -79,7 +79,7 @@ img{
 
 .kutu{
     min-width: 75px;
-    min-height: 300px;
+    min-height: 250px;
 
     border-radius: 15px;
 
@@ -104,4 +104,13 @@ img{
 
 .kutu:hover{
     box-shadow: 2px 2px 5px aquamarine,2px 2px 5px pink inset;
+}
+
+.geriBildirim{
+    /*cursor:pointer;*/
+    /*animation-play-state: paused;*/
+}
+.geriBildirim:hover{
+    cursor:pointer;
+    /*animation-play-state: running;*/
 }
